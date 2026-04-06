@@ -1,70 +1,15 @@
-{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": [],
-      "authorship_tag": "ABX9TyMF7IVIvphZ4bqlc/YhTApo",
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "cells": [
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/romydelperal/TP3_Programacion_Avanzada/blob/main/Ejercicio%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "class Punto:\n",
-        "  def __init__(self, eje_x, eje_y):\n",
-        "    self.eje_x = eje_x\n",
-        "    self.eje_y = eje_y\n",
-        "\n",
-        "  def impresion(self):\n",
-        "    return f\"Se encuentra en el punto (x;y): ({self.eje_x};{self.eje_y})\"\n",
-        "\n",
-        "  def opuesto(self):\n",
-        "    return Punto(-self.eje_x, -self.eje_y)\n",
-        "\n",
-        "punto_1 = Punto(4,3)\n",
-        "print(punto_1.impresion())\n",
-        "punto2 = punto_1.opuesto()\n",
-        "print(punto2.impresion())\n",
-        "\n",
-        ""
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "b1OhTqUaoJF0",
-        "outputId": "60e6e651-c45f-4c4c-efc8-371e840171f8"
-      },
-      "execution_count": 12,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Se encuentra en el punto (x;y): (4;3)\n",
-            "Se encuentra en el punto (x;y): (-4;-3)\n"
-          ]
-        }
-      ]
-    }
-  ]
-}
+class Punto:
+  def __init__(self, eje_x, eje_y):
+    self.eje_x = eje_x
+    self.eje_y = eje_y
+  
+  def impresion(self):
+    return f"Se encuentra en el punto (x;y): ({self.eje_x};{self.eje_y})"
+  
+  def opuesto(self):
+    return Punto(-self.eje_x, -self.eje_y)
+
+punto_1 = Punto(4,3)
+print(punto_1.impresion())
+punto2 = punto_1.opuesto()
+print(punto2.impresion())

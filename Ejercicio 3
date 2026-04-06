@@ -1,135 +1,40 @@
-{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": [],
-      "authorship_tag": "ABX9TyM97km7y3xDShS5uaak+T7h",
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "cells": [
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/romydelperal/TP3_Programacion_Avanzada/blob/main/Ejercicio%203\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "class Punto:\n",
-        "  def __init__(self, eje_x, eje_y):\n",
-        "    self.eje_x = eje_x\n",
-        "    self.eje_y = eje_y\n",
-        "\n",
-        "  def impresion(self):\n",
-        "    return f\"Se encuentra en el punto (x;y): ({self.eje_x};{self.eje_y})\"\n",
-        "\n",
-        "  def opuesto(self):\n",
-        "    return Punto(-self.eje_x, -self.eje_y)\n",
-        "\n",
-        "punto_1 = Punto(4,3)\n",
-        "print(punto_1.impresion())\n",
-        "punto2 = punto_1.opuesto()\n",
-        "print(punto2.impresion())\n",
-        "\n",
-        ""
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "b1OhTqUaoJF0",
-        "outputId": "60e6e651-c45f-4c4c-efc8-371e840171f8"
-      },
-      "execution_count": 12,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Se encuentra en el punto (x;y): (4;3)\n",
-            "Se encuentra en el punto (x;y): (-4;-3)\n"
-          ]
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "#Ejercicio 3:\n",
-        "#Define una clase Línea con dos atributos: _punto_a y _punto_b. Son dos puntos por los que\n",
-        "#pasa la línea en un espacio de dos dimensiones.\n",
-        "#\n",
-        "#La clase dispondrá de los siguientes métodos:\n",
-        "#● Linea(Punto, Punto) Constructor que recibe como parámetros dos objetos de la clase\n",
-        "#Punto, que son utilizados para inicializar los atributos.\n",
-        "#● mueve_derecha(float) Desplaza la línea a la derecha la distancia que se indique.\n",
-        "#● mueve_izquierda(float) Desplaza la línea a la izquierda la distancia que se indique.\n",
-        "#● mueve_arriba(float) Desplaza la línea hacia arriba la distancia que se indique.\n",
-        "#● mueve_abajo(float) Desplaza la línea hacia abajo la distancia que se indique.\n",
-        "\n",
-        "class Linea:\n",
-        "  def __init__(self, punto_a, punto_b):\n",
-        "    self.punto_a = punto_a\n",
-        "    self.punto_b = punto_b\n",
-        "\n",
-        "  def mueve_derecha(self, distancia):\n",
-        "    self.punto_a.eje_x += distancia\n",
-        "    self.punto_b.eje_x += distancia\n",
-        "\n",
-        "  def mueve_izquierda(self, distancia):\n",
-        "    self.punto_a.eje_x -= distancia\n",
-        "    self.punto_b.eje_x -= distancia\n",
-        "\n",
-        "  def mueve_arriba(self, distancia):\n",
-        "    self.punto_a.eje_y += distancia\n",
-        "    self.punto_b.eje_y += distancia\n",
-        "\n",
-        "  def mueve_abajo(self, distancia):\n",
-        "    self.punto_a.eje_y -= distancia\n",
-        "    self.punto_b.eje_y -= distancia\n",
-        "\n",
-        "\n",
-        "punto_1 = Punto(1, 2)\n",
-        "punto_2 = Punto(3, 4)\n",
-        "linea = Linea(punto_1, punto_2)\n",
-        "linea.mueve_derecha(2)\n",
-        "print(linea.punto_a.impresion())\n",
-        "print(linea.punto_b.impresion())\n",
-        "\n",
-        "\n"
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "0Ru-wz2S1pHC",
-        "outputId": "3fe6c19e-0e21-4317-80ec-6967008a0b40"
-      },
-      "execution_count": 14,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Se encuentra en el punto (x;y): (3;2)\n",
-            "Se encuentra en el punto (x;y): (5;4)\n"
-          ]
-        }
-      ]
-    }
-  ]
-}
+#Ejercicio 3:
+#Define una clase Línea con dos atributos: _punto_a y _punto_b. Son dos puntos por los que
+#pasa la línea en un espacio de dos dimensiones.
+#
+#La clase dispondrá de los siguientes métodos:
+#● Linea(Punto, Punto) Constructor que recibe como parámetros dos objetos de la clase
+#Punto, que son utilizados para inicializar los atributos.
+#● mueve_derecha(float) Desplaza la línea a la derecha la distancia que se indique.
+#● mueve_izquierda(float) Desplaza la línea a la izquierda la distancia que se indique.
+#● mueve_arriba(float) Desplaza la línea hacia arriba la distancia que se indique.
+#● mueve_abajo(float) Desplaza la línea hacia abajo la distancia que se indique.
+
+class Linea:
+  def __init__(self, punto_a, punto_b):
+    self.punto_a = punto_a
+    self.punto_b = punto_b
+  
+  def mueve_derecha(self, distancia):
+    self.punto_a.eje_x += distancia
+    self.punto_b.eje_x += distancia
+
+  def mueve_izquierda(self, distancia):
+    self.punto_a.eje_x -= distancia
+    self.punto_b.eje_x -= distancia
+  
+  def mueve_arriba(self, distancia):
+    self.punto_a.eje_y += distancia
+    self.punto_b.eje_y += distancia
+
+  def mueve_abajo(self, distancia):
+    self.punto_a.eje_y -= distancia
+    self.punto_b.eje_y -= distancia
+  
+
+punto_1 = Punto(1, 2)
+punto_2 = Punto(3, 4)
+linea = Linea(punto_1, punto_2)
+linea.mueve_derecha(2)
+print(linea.punto_a.impresion())
+print(linea.punto_b.impresion())
